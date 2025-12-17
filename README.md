@@ -1,166 +1,133 @@
 # FinSentinent 🏦  
-### Agentic AI for Intelligent Personal Loan Processing in BFSI
+### Agentic AI System for Intelligent Personal Loan Processing in BFSI
 
-FinSentinent is a working prototype that demonstrates how **Agentic AI systems** can transform personal loan journeys for NBFCs by combining orchestration, explainability, and compliance-aware automation.
+FinSentinent is an agentic AI system designed to transform digital personal loan journeys for NBFCs by combining autonomous agent orchestration, explainable decisioning, emotion-aware engagement, and compliance-first execution.
 
----
-
-## 🚀 Key Highlights
-
-- 🧠 Master–Worker Agent Architecture
-- 📊 Deterministic, policy-driven underwriting (no black-box decisions)
-- 🔄 Intelligent rejection recovery via offer reframing
-- 🧾 Automated sanction letter generation (PDF)
-- 👩‍💼 Human-in-the-loop escalation
-- 🪵 Real-time agent activity logs
-- 📈 Visual loan journey progress tracking
-- 🏦 BFSI-compliant, audit-friendly design
+The system simulates a human loan officer at digital scale while remaining auditable, controllable, and production-aligned.
 
 ---
 
-## 🧩 System Architecture
+## 🚀 Core Value Proposition
 
-### Agents
-- **Master Agent** – Orchestrates the entire loan journey
-- **Sales Agent** – Handles need discovery, EMI explanation, persuasion
-- **Verification Agent** – Validates KYC from CRM
-- **Underwriting Agent** – Enforces credit, salary, and policy rules
-- **Offer Reframing Agent** – Recovers rejected cases with safer alternatives
-- **Sanction Agent** – Generates sanction letter PDF
-
-### Tool Layer
-All agents interact only through tools (mock APIs):
-- CRM Tool
-- Credit Bureau Tool
-- Offer Mart Tool
-- Salary Slip Tool
-- EMI Calculator Tool
+- Agentic orchestration instead of linear chatbot flows
+- Emotion and intent aware conversational reasoning
+- Policy driven underwriting with full explainability
+- Rejection is treated as a recoverable state, not a dead end
+- Seamless transition from AI to human without loss of context
+- Designed for BFSI compliance, trust, and scale
 
 ---
 
-## 🔄 End-to-End Flow (Textual Flowchart)
-Customer Lands on Web Chatbot
-        |
-        v
-[ Master Agent ]
-  - Starts conversation
-  - Understands intent (loan need, amount, tenure)
-  - Sets conversational tone
-        |
-        v
-[ Sales Agent ]
-  - Explains loan options
-  - Calculates & explains EMI
-  - Sets expectations transparently
-        |
-        v
-[ Verification Agent ]
-  - Fetches KYC from CRM
-        |
-        +----> KYC Incomplete
-        |        |
-        |        v
-        |   Customer prompted to update details
-        |        |
-        |        v
-        |   (Feedback Loop → Verification Agent)
-        |
-        v
-[ Underwriting Agent ]
-  - Fetches credit score (Credit Bureau)
-  - Evaluates policy rules:
-      • Credit score threshold
-      • Pre-approved limit
-      • EMI ≤ 50% salary
-        |
-        |------------------------------|
-        |                              |
-        v                              v
-   APPROVED                        REJECTED
-        |                              |
-        v                              v
-[ Sanction Letter Agent ]     [ Offer Reframing Agent ]
-  - Generates PDF               - Identifies rejection reason
-  - Shares instantly            - Presents clickable alternatives:
-                                   • Lower amount
-                                   • Extended tenure
-                                   • Safer EMI
-                                  |
-                                  |
-                                  v
-                       Customer Feedback on Reframed Offer
-                                  |
-                   |--------------------------------------|
-                   |                                      |
-                   v                                      v
-              ACCEPTS                               NOT SATISFIED
-                   |                                      |
-                   v                                      v
-        (Back to Underwriting Agent)        [ Escalation Path ]
-                   |                         - Sales Agent steps in OR
-                   v                         - Human Representative call
-            (Fast-track approval)            - Full AI context shared
-                                                   |
-                                                   v
-                                            Manual clarification /
-                                            assisted closure
+## 🧠 Agentic Architecture
+
+### Agent Roles
+
+- **Master Agent**  
+  Owns the conversation, memory, orchestration, and control flow
+
+- **Sales Agent**  
+  Understands need, explains EMI, persuades with transparency
+
+- **Verification Agent**  
+  Performs KYC validation using CRM data
+
+- **Underwriting Agent**  
+  Applies credit policy, salary rules, EMI thresholds
+
+- **Offer Reframing Agent**  
+  Converts rejection into safer alternatives using reason-aware logic
+
+- **Sanction Agent**  
+  Generates sanction letter upon approval
+
+---
+
+## 🧩 System Architecture Diagram
+
+![Architecture Diagram](assets/architecture.png)
+
+---
+
+## 🔄 End-to-End Flow
+
+![Flowchart](assets//flowchart.jpeg)
+
+---
+
+## 🧠 Memory and Intelligence Layer
+
+- Conversational memory across sessions
+- Emotional state and intent tracking
+- Shared context across all agents
+- Feedback loops for recovery and escalation
+- Full decision trace for audit and compliance
+
+---
+
+## 📊 Demonstrated Scenarios
+
+### Case 6: Credit Eligible with Salary Validation  
+![Case 6](assets/cases/customer6case.png)
+
+### Case 10: Rejection with Intelligent Reframing  
+![Case 10](assets/cases/customer10case.png)
+
+### Case 11: Approval with Instant Sanction  
+![Case 11](assets/cases/customer11case.png)
 
 ---
 
 ## 🛠️ Technology Stack (Production Vision)
 
-### Agentic & AI Layer
-- **CrewAI / LangGraph** – Multi-agent orchestration and control flow
-- **LLM Providers (Pluggable)** – OpenAI / Azure OpenAI / Gemini
-- **Prompt & Policy Layer** – Structured prompts with rule-based guards
+### Agentic and Intelligence Layer
+- CrewAI
+- LangGraph
+- Pluggable LLMs (OpenAI, Azure OpenAI, Gemini)
+- Prompt and Policy Guardrails
 
-### Backend & APIs
-- **FastAPI** – Secure, scalable API services
-- **Python** – Core orchestration and business logic
-- **Microservice Architecture** – Modular agent services
+### Backend and APIs
+- FastAPI
+- Python
+- Event driven microservices
 
-### Data & Memory
-- **Vector Databases** – Chroma / FAISS for conversational memory
-- **Relational DB** – PostgreSQL for transactional data
-- **Object Storage** – Sanction letters, documents, salary slips
+### Data and Memory
+- Vector databases (Chroma, FAISS)
+- Relational databases (PostgreSQL)
+- Object storage for documents
 
-### Security & Compliance
-- **RBAC & Audit Logs**
-- **Policy Guardrails for RBI Compliance**
-- **Human-in-the-Loop Escalation**
+### Security and Compliance
+- RBI aligned policy enforcement
+- Role based access control
+- Audit logs and traceability
+- Human in the loop escalation
 
-### Deployment & Infrastructure
-- **Docker & Kubernetes**
-- **Cloud (AWS / Azure / GCP)**
-- **CI/CD Pipelines**
-
-> ⚠️ *Prototype implementations mock these services while preserving production-aligned interfaces.*
-
----
-## 🖥️ Prototype UI
-
-- Built using **Streamlit**
-- Shows:
-  - Customer profile
-  - Agent-wise outputs
-  - Loan journey progress bar
-  - Agent activity logs
-  - Downloadable sanction letter
+### Deployment
+- Docker
+- Kubernetes
+- Cloud native infrastructure
+- CI CD pipelines
 
 ---
 
-## ⚠️ Compliance & Design Philosophy
+## 🔐 Design Principles
 
-- No black-box ML decisions
-- Fully explainable logic
-- Mocked APIs for safe prototyping
-- Human override always available
-- Production-aligned interfaces
+- No black box decisions
+- Every approval and rejection is explainable
+- AI autonomy with controlled escalation
+- Recovery focused customer journeys
+- Production aligned interfaces
 
 ---
 
-## ▶️ How to Run
+## 📌 Note
 
-```bash
-pip install -r requirements.txt
-streamlit run app.py
+This repository focuses on **agent orchestration, intelligence flow, and system design**.  
+UI and infrastructure components are abstracted to highlight decision intelligence and agent collaboration.
+
+---
+
+## 📎 Assets
+
+- Architecture Diagram: `assets/architecture.png`
+- Flowchart: `assets/flowchart.jpeg`
+- Case Demonstrations: `assets/cases/`
