@@ -119,7 +119,7 @@ The system simulates a human loan officer at digital scale while remaining audit
 
 ## ▶️ How to Run
 bash
-pip install -r requirements.txt
+pip install -r requirements.txt,
 streamlit run app.py
 
 ## 📌 Note
@@ -134,6 +134,7 @@ UI and infrastructure components are abstracted to highlight decision intelligen
 - Architecture Diagram: `assets/architecture.jpeg`
 - Flowchart: `assets/flowchart.jpeg`
 - Case Demonstrations: `assets/cases/`
+
 
 
 
