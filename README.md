@@ -70,7 +70,7 @@ The system simulates a human loan officer at digital scale while remaining audit
 ![Case 6](assets/customer6case/3.png)
 
 ### Case 10: Rejection with Intelligent Reframing  
-![Case 10](assets/customer10case/3.png)
+![Case 10](assets/customer10case/2.png)
 
 ### Case 11: Approval with Instant Sanction  
 ![Case 11](assets/customer11case/2.png)
@@ -134,5 +134,6 @@ UI and infrastructure components are abstracted to highlight decision intelligen
 - Architecture Diagram: `assets/architecture.jpeg`
 - Flowchart: `assets/flowchart.jpeg`
 - Case Demonstrations: `assets/cases/`
+
 
 
