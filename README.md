@@ -44,7 +44,7 @@ The system simulates a human loan officer at digital scale while remaining audit
 
 ## 🧩 System Architecture Diagram
 
-![Architecture Diagram](assets/architecture.png)
+![Architecture Diagram](assets/architecture.jpeg)
 
 ---
 
@@ -67,13 +67,13 @@ The system simulates a human loan officer at digital scale while remaining audit
 ## 📊 Demonstrated Scenarios
 
 ### Case 6: Credit Eligible with Salary Validation  
-![Case 6](assets/cases/customer6case.png)
+![Case 6](assets/cases/customer6case/3.png)
 
 ### Case 10: Rejection with Intelligent Reframing  
-![Case 10](assets/cases/customer10case.png)
+![Case 10](assets/cases/customer10case/3.png)
 
 ### Case 11: Approval with Instant Sanction  
-![Case 11](assets/cases/customer11case.png)
+![Case 11](assets/cases/customer11case/2.png)
 
 ---
 
@@ -128,6 +128,7 @@ UI and infrastructure components are abstracted to highlight decision intelligen
 
 ## 📎 Assets
 
-- Architecture Diagram: `assets/architecture.png`
+- Architecture Diagram: `assets/architecture.jpeg`
 - Flowchart: `assets/flowchart.jpeg`
 - Case Demonstrations: `assets/cases/`
+
